@@ -2,8 +2,8 @@
 
 Starter kit per progetto di lenti a contatto custom:
 - calcolo parametri iniziali per lenti morbide custom;
+- selezione preliminare prodotto MedLac per indicazione clinica;
 - template ordine laboratorio;
-- template referto applicativo;
 - esempi YAML;
 - test automatici;
 - hook opzionale OpenAI API.
@@ -16,15 +16,19 @@ Starter kit per progetto di lenti a contatto custom:
 calculators/
   morbide_custom.py
   morbide_custom_cli.py
+  product_catalog.py
+  product_selector_cli.py
   genera_sintesi_openai.py
 examples/
   caso_morbida_torica.yaml
   caso_morbida_bitorica.yaml
+  selezione_prodotto_cheratocono.yaml
+  selezione_prodotto_multifocale.yaml
 templates/
   ordine_medlac.md
-  referto_applicativo.md
 tests/
   test_morbide_custom.py
+  test_product_catalog.py
 ```
 
 ## Installazione
@@ -37,10 +41,41 @@ source .venv/bin/activate      # macOS/Linux
 pip install -r requirements.txt
 ```
 
-## Esecuzione calcolatore
+## Esecuzione calcolatore morbide custom
 
 ```bash
 python calculators/morbide_custom_cli.py examples/caso_morbida_torica.yaml
+```
+
+## Selezione prodotto MedLac
+
+```bash
+python calculators/product_selector_cli.py examples/selezione_prodotto_cheratocono.yaml
+```
+
+Indicazioni gestite nella fase 2:
+
+```text
+cornea_regolare
+cornea_irregolare
+cheratocono
+prismatica
+multifocale
+controllo_miopia
+terapeutica
+filtrante
+```
+
+Prodotti MedLac inseriti:
+
+```text
+MED 02 PRISMA / SOFT BITORIC
+MED PRISMODIREZIONALE
+MED MULTIVISION SOFT
+MED CONTROL
+MED CONUS / KERATOPLUS
+MED BIOPROTECT
+MED FILTER / MED FILTER TORIC
 ```
 
 ## Esecuzione test
@@ -77,3 +112,14 @@ Secondo tabella MedLac caricata nel progetto:
 
 ### Delta-sag
 Se è disponibile OC-SAG, viene suggerito un target CL-SAG = OC-SAG + 120/280 µm.
+
+## Fase 2
+
+La fase 2 introduce un selettore prodotto separato dal calcolo geometrico. Il selettore assegna uno score in base a:
+- indicazione clinica;
+- compatibilità BC;
+- compatibilità DIA;
+- range sfera/cilindro/addizione/prisma;
+- preferenza per materiali SiHy o ad alta permeabilità.
+
+Il risultato è una lista ordinata di prodotti candidati con motivazioni e warning sui parametri fuori range.
