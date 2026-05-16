@@ -1,0 +1,11 @@
+k_flat_mm: 7.65
+k_steep_mm: 7.20
+hvid_mm: 11.70
+sphere_spectacle: -5.50
+cyl_spectacle: -2.75
+axis: 95
+vertex_distance_mm: 12.0
+lens_type: bitorica
+material_group: definitive65_74
+ocular_sag_um: 3750
+notes: "Esempio didattico: morbida bitorica custom con astigmatismo corneale > 2 D."
