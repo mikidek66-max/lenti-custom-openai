@@ -1,0 +1,7 @@
+indication: multifocale
+bc_mm: 8.60
+dia_mm: 14.20
+sphere_d: -2.00
+cyl_d: -0.75
+add_d: 2.00
+prefer_silicone_hydrogel: true
