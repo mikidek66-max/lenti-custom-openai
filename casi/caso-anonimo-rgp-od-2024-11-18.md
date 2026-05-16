@@ -1,7 +1,7 @@
 # Caso anonimo — progetto lente RGP corneale OD
 
 > File tecnico anonimizzato. Non contiene nome, data di nascita o altri identificativi personali.  
-> Progetto basato su topografia OD caricata. Da validare con refrazione soggettiva, prova diagnostica, fluoresceina, sovrarefrazione e valutazione biomicroscopica.
+> Progetto basato su topografia OD caricata. Da validare con refrazione soggettiva completa, prova diagnostica, fluoresceina, sovrarefrazione e valutazione biomicroscopica.
 
 ---
 
@@ -28,17 +28,28 @@
 
 ---
 
-## 2. Valutazione
+## 2. Refrazione comunicata
+
+```text
+OD SF -4.50
+```
+
+Assunzione operativa: refrazione a piano occhiale con distanza apice circa 12 mm. Mancano cilindro soggettivo, asse e visus.
+
+---
+
+## 3. Valutazione
 
 - Astigmatismo corneale moderato-basso: 1.24 D.
 - Pattern topografico compatibile con astigmatismo obliquo relativamente regolare.
 - TI 0.7: non orienta, da solo, verso disegno da cheratocono.
 - Prima scelta: RGP corneale standard/asferica, non cheratoconica.
 - Geometria bitorica non necessaria in prima prova, salvo fluoresceina instabile o basculamento marcato.
+- Con refrazione solo sferica, la prima RGP può restare sferica/asferica posteriore. Il cilindro corneale dovrebbe essere in buona parte gestito dal menisco lacrimale.
 
 ---
 
-## 3. Progetto prima lente diagnostica RGP OD
+## 4. Progetto prima lente diagnostica RGP OD
 
 | Parametro | Scelta proposta |
 |---|---:|
@@ -49,11 +60,11 @@
 | Diametro totale | 9.70 mm |
 | BOZD / zona ottica posteriore | 7.70 mm |
 | Periferia | standard, edge lift medio |
-| Potere diagnostico | plano o potere da calcolare dopo refrazione |
+| Potere teorico iniziale | circa -4.50 D |
 
 ---
 
-## 4. Razionale tecnico
+## 5. Razionale tecnico
 
 ### BOZR
 
@@ -76,7 +87,57 @@
 
 ---
 
-## 5. Progetto sintetico ordinabile come prova
+## 6. Calcolo potere teorico
+
+Refrazione a piano occhiale:
+
+```text
+SF -4.50
+```
+
+Compensazione al vertice stimata a 12 mm:
+
+```text
+-4.50 D → circa -4.25 D a piano corneale
+```
+
+Curva base scelta:
+
+```text
+BC 8.00 mm ≈ 42.19 D
+```
+
+K piatto:
+
+```text
+41.84 D
+```
+
+Differenza BC rispetto a K piatto:
+
+```text
+42.19 - 41.84 = +0.35 D
+```
+
+La lente è circa 0.35 D più stretta del K piatto; quindi genera un menisco lacrimale positivo di circa +0.35 D. Per compensarlo, si aggiunge circa -0.35 D al potere della lente.
+
+Calcolo:
+
+```text
+-4.25 + (-0.35) = -4.60 D
+```
+
+Arrotondamento produttivo:
+
+```text
+BVP teorico iniziale = -4.50 D
+```
+
+Nota: -4.75 D è accettabile se in refrazione si tende a preferire il massimo positivo/minimo negativo non sufficiente o se alla prova la sovrarefrazione indica ulteriore negativo.
+
+---
+
+## 7. Progetto sintetico ordinabile come prova
 
 ```text
 OD — RGP corneale asferica/tangenziale
@@ -85,12 +146,12 @@ DIA 9.70
 BOZD 7.70
 Periferia standard / edge lift medio
 Materiale GP alto Dk 100–125
-BVP: da definire con refrazione + sovrarefrazione
+BVP -4.50 D teorico iniziale
 ```
 
 ---
 
-## 6. Valutazione in prova
+## 8. Valutazione in prova
 
 | Controllo | Target |
 |---|---|
@@ -105,30 +166,29 @@ BVP: da definire con refrazione + sovrarefrazione
 
 ---
 
-## 7. Problem solving
+## 9. Problem solving
 
 | Reperto alla prova | Modifica |
 |---|---|
 | Appoggio centrale marcato | stringere BC a 7.95 mm |
-| Pooling centrale e movimento scarso | appiattire BC a 8.05 mm |
+| Pooling centrale e lente ferma | appiattire BC a 8.05 mm |
 | Decentramento inferiore | aumentare diametro a 9.80–9.90 mm o valutare edge lift |
-| Lente molto mobile / edge lift eccessivo | aumentare diametro o ridurre lift periferico |
+| Movimento eccessivo / edge lift eccessivo | aumentare diametro o ridurre lift periferico |
 | Sigillatura periferica | aprire periferia / aumentare edge lift |
 | Basculamento obliquo stabile | valutare posteriore torica o diametro maggiore |
 | Residuo cilindrico in sovrarefrazione > 0.75 D | valutare front toric o bitorica |
 
 ---
 
-## 8. Dato mancante essenziale
+## 10. Dati ancora da confermare
 
-Il potere finale non può essere definito dai soli dati topografici. Servono:
+- Refrazione soggettiva completa.
+- Visus con refrazione.
+- Distanza apice effettiva.
+- Sovrarefrazione sopra lente diagnostica.
+- Fluoresceina e centratura dopo assestamento.
 
-- refrazione soggettiva aggiornata;
-- distanza apice se poteri elevati;
-- potere della lente diagnostica applicata;
-- sovrarefrazione sferocilindrica sopra lente stabilizzata.
-
-Formula operativa:
+Formula operativa finale:
 
 ```text
 BVP finale = potere lente diagnostica + sovrarefrazione compensata + eventuale correzione lacrima/vertice
