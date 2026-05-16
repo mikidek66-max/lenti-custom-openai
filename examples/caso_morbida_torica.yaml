@@ -1,0 +1,11 @@
+k_flat_mm: 7.80
+k_steep_mm: 7.55
+hvid_mm: 11.80
+sphere_spectacle: -3.75
+cyl_spectacle: -1.25
+axis: 180
+vertex_distance_mm: 12.0
+lens_type: torica
+material_group: definitive65_74
+ocular_sag_um: 3600
+notes: "Esempio didattico: morbida torica custom."
